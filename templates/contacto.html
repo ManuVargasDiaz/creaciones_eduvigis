@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Creaciones Eduvigis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-content">
+      <div class="branding">
+        <h1>Creaciones Eduvigis</h1>
+        <p class="subtitulo">Hilo a hilo tejemos tu estilo</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+          <li><a href="{{ url_for('sobre_nosotros') }}">Sobre Nosotros</a></li>
+          <li><a href="{{ url_for('productos') }}">Productos</a></li>
+          <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="contact">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="flash-mensaje">
+            {{ messages[0] }}
+          </div>
+        {% endif %}
+      {% endwith %}
+      <form action="{{ url_for('enviar') }}" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Creaciones Eduvigis. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
