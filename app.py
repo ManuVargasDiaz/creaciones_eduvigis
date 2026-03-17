@@ -25,9 +25,6 @@ def enviar():
     email = request.form['email']
     mensaje = request.form['mensaje']
 
-    
-
-
     flash('¡Gracias por contactarnos, te responderemos pronto!')
     return redirect(url_for('contacto'))
 
