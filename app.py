@@ -37,6 +37,7 @@ def enviar():
     nombre = request.form['nombre']
     email = request.form['email']
     mensaje = request.form['mensaje']
+    sub_style = "font-size:1rem; font-weight:200; color:#9485df; text-align:center; letter-spacing:1px; margin-bottom:20px; margin-top:-0.4rem;"
 
     html_content = f"""
     <!DOCTYPE html>
@@ -78,24 +79,6 @@ def enviar():
         font-size: 1rem;
         color: #444444;
     }}
-    .subtitulo {{
-        font-size: 1rem;
-        font-weight: 200;
-        color: #9485df;
-        text-align: center;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        margin-top: -0.4rem;
-    }}
-    .sub {{
-        font-size: 1rem;
-        font-weight: 200;
-        color: #9485df;
-        text-align: center;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        margin-top: -0.4rem;
-    }}
     .highlight {{
         font-weight: 700;
         color: #222222;
@@ -120,8 +103,7 @@ def enviar():
     <body>
 
     <div class="header-titulo">Creaciones Eduvigis</div>
-    <p class="sub">Hilo a hilo tejemos tu estilo</p>
-
+    <p style="{sub_style}">Hilo a hilo tejemos tu estilo</p>
     <h2>Nuevo mensaje de contacto</h2>
     <div class="contenido">
         <p><span class="highlight">Nombre:</span> {nombre}</p>
