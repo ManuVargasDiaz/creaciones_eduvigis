@@ -36,11 +36,59 @@ def enviar():
     email = request.form['email']
     mensaje = request.form['mensaje']
 
+    html_content = f"""
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <title>Nuevo mensaje</title>
+    <style>
+    /* Aquí va todo tu CSS */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap');
+    body {{
+        font-family: 'Montserrat', 'Open Sans', sans-serif;
+        background-color: #ffffff;
+        color: #222222;
+        line-height: 1.6;
+        padding: 20px;
+    }}
+    h2 {{
+        color: #9485df;
+        text-align: center;
+    }}
+    .contenido {{
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: 1px solid #eaeaea;
+    }}
+    p {{
+        font-size: 1rem;
+        color: #444444;
+    }}
+    .highlight {{
+        font-weight: 700;
+        color: #222222;
+    }}
+    </style>
+    </head>
+    <body>
+        <h2>Nuevo mensaje de contacto</h2>
+        <div class="contenido">
+            <p><span class="highlight">Nombre:</span> {nombre}</p>
+            <p><span class="highlight">Correo:</span> {email}</p>
+            <p><span class="highlight">Mensaje:</span><br>{mensaje}</p>
+        </div>
+    </body>
+    </html>
+    """
+
     msg = Message(
     subject=f"Nuevo mensaje de {nombre}",
     sender=app.config['MAIL_USERNAME'], 
     recipients=["eduvigisdiaz12@gmail.com"],
-    body=f"De: {nombre} <{email}>\n\n{mensaje}"
+    html=html_content
     )
 
     try:
