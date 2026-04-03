@@ -93,23 +93,30 @@ def enviar():
         color: #555555;
         margin-top: 30px;
     }}
+    .subtitulo {{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #9485df;
+        margin-top: -10px;
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }}
     </style>
     </head>
     <body>
 
     <div class="header-titulo">Creaciones Eduvigis</div>
-    <div class="mensaje-arriba">
-        <p>Pronto te contactaremos, muchas gracias por preferirnos</p>
-    </div>
-
     <h2>Nuevo mensaje de contacto</h2>
-
+    <p class="subtitulo">Hilo a hilo tejemos tu estilo</p>
     <div class="contenido">
         <p><span class="highlight">Nombre:</span> {nombre}</p>
         <p><span class="highlight">Correo:</span> {email}</p>
         <p><span class="highlight">Mensaje:</span><br>{mensaje}</p>
     </div>
-
+    <div class="mensaje-arriba">
+        <p>Pronto te contactaremos, muchas gracias por preferirnos</p>
+    </div>
     <footer class="footer">
         <div class="container">
             <p>&copy; {anio_actual} Creaciones Eduvigis. Todos los derechos reservados.</p>
