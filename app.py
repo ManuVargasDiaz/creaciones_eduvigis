@@ -53,16 +53,22 @@ def enviar():
         line-height: 1.6;
         padding: 20px;
     }}
+    .header-titulo {{
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #222222;
+        text-align: center;
+        margin-bottom: 10px;
+    }}
+    .mensaje-arriba {{
+        text-align: center;
+        font-size: 1.1rem;
+        color: #555555;
+        margin-bottom: 20px;
+    }}
     h2 {{
         color: #9485df;
         text-align: center;
-    }}
-    .contenido {{
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 10px;
-        margin-top: 20px;
-        border: 1px solid #eaeaea;
     }}
     p {{
         font-size: 1rem;
@@ -72,27 +78,47 @@ def enviar():
         font-weight: 700;
         color: #222222;
     }}
+    .contenido {{
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: 1px solid #eaeaea;
+    }}
+    .footer {{
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 0.9rem;
+        color: #555555;
+        margin-top: 30px;
+    }}
     </style>
     </head>
     <body>
-        <div class="mensaje-arriba">
-            <p>Pronto te contactaremos, muchas gracias por preferirnos</p>
+
+    <div class="header-titulo">Creaciones Eduvigis</div>
+    <div class="mensaje-arriba">
+        <p>Pronto te contactaremos, muchas gracias por preferirnos</p>
+    </div>
+
+    <h2>Nuevo mensaje de contacto</h2>
+
+    <div class="contenido">
+        <p><span class="highlight">Nombre:</span> {nombre}</p>
+        <p><span class="highlight">Correo:</span> {email}</p>
+        <p><span class="highlight">Mensaje:</span><br>{mensaje}</p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; {anio_actual} Creaciones Eduvigis. Todos los derechos reservados.</p>
         </div>
-        <h1>Creaciones Eduvigis</h1>
-        <h2>Nuevo Mensaje</h2>
-        <div class="contenido">
-            <p><span class="highlight">Nombre:</span> {nombre}</p>
-            <p><span class="highlight">Correo:</span> {email}</p>
-            <p><span class="highlight">Mensaje:</span><br>{mensaje}</p>
-        </div>
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; {anio_actual} Creaciones Eduvigis. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+    </footer>
+
     </body>
     </html>
-    """
+"""
 
     msg = Message(
     subject=f"Nuevo mensaje de {nombre}",
