@@ -78,6 +78,15 @@ def enviar():
         font-size: 1rem;
         color: #444444;
     }}
+    .subtitulo {{
+        font-size: 1rem;
+        font-weight: 200;
+        color: #9485df;
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        margin-top: -0.4rem;
+    }}
     .highlight {{
         font-weight: 700;
         color: #222222;
@@ -96,16 +105,6 @@ def enviar():
         font-size: 0.9rem;
         color: #555555;
         margin-top: 30px;
-    }}
-    .subtitulo {{
-        font-size: 1rem;
-        font-weight: 200;
-        color: #9485df;
-        margin-top: -10px;
-        text-align: center;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        margin-top: -0.4rem;
     }}
     </style>
     </head>
