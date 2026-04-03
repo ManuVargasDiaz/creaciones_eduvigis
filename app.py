@@ -4,6 +4,7 @@ import os
 
 app = Flask(__name__)
 app.secret_key = 'devKey_81347525mverka'
+anio_actual = datetime.now().year
 
 @app.route('/')
 def inicio():
@@ -43,7 +44,6 @@ def enviar():
     <meta charset="UTF-8">
     <title>Nuevo mensaje</title>
     <style>
-    /* Aquí va todo tu CSS */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap');
     body {{
         font-family: 'Montserrat', 'Open Sans', sans-serif;
@@ -74,12 +74,21 @@ def enviar():
     </style>
     </head>
     <body>
-        <h2>Nuevo mensaje de contacto</h2>
+        <div class="mensaje-arriba">
+            <p>Pronto te contactaremos, muchas gracias por preferirnos</p>
+        </div>
+        <h1>Creaciones Eduvigis</h1>
+        <h2>Nuevo Mensaje</h2>
         <div class="contenido">
             <p><span class="highlight">Nombre:</span> {nombre}</p>
             <p><span class="highlight">Correo:</span> {email}</p>
             <p><span class="highlight">Mensaje:</span><br>{mensaje}</p>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; {anio_actual} Creaciones Eduvigis. Todos los derechos reservados.</p>
+            </div>
+        </footer>
     </body>
     </html>
     """

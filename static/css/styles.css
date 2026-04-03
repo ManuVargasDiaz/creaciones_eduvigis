@@ -10,7 +10,6 @@
   --color-texto-h2: #9485df;
 }
 
-/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,7 +23,6 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
 header.main-header {
   background-color: var(--color-fondo-secundario);
   padding: 20px 0;
