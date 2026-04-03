@@ -58,6 +58,8 @@ def enviar():
         font-weight: 700;
         color: #222222;
         text-align: center;
+        margin: 0; 
+        padding-bottom: 5px; 
     }}
     .mensaje-arriba {{
         text-align: center;
@@ -68,6 +70,9 @@ def enviar():
     h2 {{
         color: #9485df;
         text-align: center;
+        margin: 0;
+        padding-top: 5px; 
+        padding-bottom: 10px;
     }}
     p {{
         font-size: 1rem;
