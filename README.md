@@ -34,7 +34,7 @@ Sitio web para Creaciones Eduvigis, un emprendimiento enfocado en tejidos person
 📬 Contacto
 
 ¿Tienes preguntas o quieres colaborar?
-Puedes escribir a creaciones.eduvigis@ejemplo.com o visitar la página de contacto.
-© 2025 Creaciones Eduvigis
+Puedes escribir a m.vargas.diaz.s.work@gmail.com o visitar la página de contacto.
+© 2026 Creaciones Eduvigis
 
 Diseñado con 💜 para promover el arte del tejido personalizado.
