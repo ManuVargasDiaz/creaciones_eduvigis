@@ -94,8 +94,8 @@ def enviar():
         margin-top: 30px;
     }}
     .subtitulo {{
-        font-size: 1.2rem;
-        font-weight: 400;
+        font-size: 1rem;
+        font-weight: 200;
         color: #9485df;
         margin-top: -10px;
         text-align: center;
@@ -107,8 +107,9 @@ def enviar():
     <body>
 
     <div class="header-titulo">Creaciones Eduvigis</div>
-    <h2>Nuevo mensaje de contacto</h2>
     <p class="subtitulo">Hilo a hilo tejemos tu estilo</p>
+
+    <h2>Nuevo mensaje de contacto</h2>
     <div class="contenido">
         <p><span class="highlight">Nombre:</span> {nombre}</p>
         <p><span class="highlight">Correo:</span> {email}</p>
