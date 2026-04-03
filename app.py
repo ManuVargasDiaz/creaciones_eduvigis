@@ -105,6 +105,7 @@ def enviar():
         text-align: center;
         letter-spacing: 1px;
         margin-bottom: 20px;
+        margin-top: -0.4rem;
     }}
     </style>
     </head>
