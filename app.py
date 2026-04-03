@@ -58,7 +58,6 @@ def enviar():
         font-weight: 700;
         color: #222222;
         text-align: center;
-        margin-bottom: 10px;
     }}
     .mensaje-arriba {{
         text-align: center;
